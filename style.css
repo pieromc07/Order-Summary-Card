@@ -1,0 +1,124 @@
+/** @format */
+:root {
+	/* * colors */
+	--background: #e0e8ff;
+	--primary: #3828e0;
+	--bg: #f4f7ff;
+	--color-1: #717fa6;
+	--color-2: #1f2e56;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+	font-size: 16px;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("./images/pattern-background-mobile.svg");
+	background-repeat: no-repeat;
+	background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 310px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.card .card__image{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card .card__title{
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 15px 0px 10px 0px;
+}
+.card .card__description{
+    margin: 0px 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-1);
+}
+
+.card .card__valor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin: 20px 30px 25px 30px;
+    padding: 10px;
+    background-color: var(--bg);
+    border-radius: 10px;
+}
+.card .card__valor .valor__price{
+    text-align: start;
+    padding: 0 10px;
+}
+.card .card__valor .valor__price strong{
+    font-weight: 700;
+}
+.card .card__valor .valor__price span{
+    color: var(--color-1);
+    font-weight: 500;
+}
+.card .card__valor .valor__change{
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card .card__valor .valor__change:hover{
+  color: #766CF1;
+}
+.card .card__btn{
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 2rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow:0px 16px 20px -6px rgba(113,127,166,1);
+    cursor: pointer;
+}
+.card .card__btn:hover{
+    background-color: #766CF1;
+}
+.card .card__cancel{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-1);
+    cursor: pointer;
+}
+.card .card__cancel:hover{
+    color: var(--color-2)
+}
+
+@media (min-width: 377px) {
+	.container {
+		background-image: url("./images/pattern-background-desktop.svg");
+	}
+}
+
+@media (min-width:768px) {
+    .card{
+        max-width: 450px;
+    }
+}
